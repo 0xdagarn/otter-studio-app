@@ -72,13 +72,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <WagmiConfig config={wagmiConfig}>
       <RainbowKitProvider appInfo={demoAppInfo} chains={chains}>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "flex-end",
-            padding: 12,
-          }}
-        >
+        <div class="absolute p-[12px] right-0">
           <ConnectButton />
         </div>
         <Component {...pageProps} />
