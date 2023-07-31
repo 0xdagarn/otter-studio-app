@@ -75,14 +75,14 @@ const FundingModal = ({ isOpenModal, setIsOpenModal, write }) => {
                       height={933}
                       alt="Picture of the author"
                     />
-                    <button
+                    {/* <button
                       class="bg-[#ffcd4e] rounded-[56px] px-[16px] py-[24px] text-18 font-bold uppercase"
                       onClick={() => {
                         if (write) write();
                       }}
                     >
                       SUPPORT THIS PROJECT
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>
@@ -123,37 +123,64 @@ export default function Funding() {
   }, [isSuccess]);
 
   return (
-    <div class="bg-[#081521] pb-[400px]">
+    <div class="bg-[#081521] pb-[200px]">
       <FundingModal isOpenModal={isOpenFundingModal} write={write} />
       <FundingSuccessModal isOpenModal={isOpenFundingSuccessModal} />
-      <div class="bg-[url('/bg-funding-detail.svg')] bg-cover flex items-center justify-center h-[392px] font-normal text-[64px] text-white">
+      {/* <div class="bg-[url('/bg-funding-detail.svg')] bg-cover flex items-center justify-center h-[392px] font-normal text-[64px] text-white">
+        Tears of the Antarctic
+      </div> */}
+      <div class="flex items-center justify-center font-normal text-[64px] text-white pt-[200px]">
         Tears of the Antarctic
       </div>
-      <div class="flex gap-24 items-center justify-center">
-        <div>
-          <Image
-            class="mt-28"
-            src="/dummy/img-left-funding.png"
-            width={700}
-            height={644}
-            alt="Picture of the author"
-          />
+      {/* <Image
+        src="/dummy/detail-header.png"
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: "100%", height: "auto" }}
+      /> */}
+      <div class="flex items-center justify-center flex-col">
+        <div class="flex gap-24 items-center justify-center">
+          <div>
+            <Image
+              class="mt-28"
+              src="/dummy/img-left-funding.png"
+              width={700}
+              height={644}
+              alt="Picture of the author"
+            />
+          </div>
+          <div class="flex flex-col items-center justify-center">
+            <Image
+              src="/dummy/img-right-funding.png"
+              width={332}
+              height={644}
+              alt="Picture of the author"
+            />
+            <button
+              class="bg-[#ffcd4e] rounded-[56px] px-[16px] py-[24px] text-18 font-bold uppercase mt-[-35px]"
+              onClick={() => {
+                setIsOpenFunginModal(true);
+              }}
+            >
+              SUPPORT THIS PROJECT
+            </button>
+          </div>
         </div>
-        <div class="flex flex-col items-center justify-center">
+        <div class="mt-20">
           <Image
-            src="/dummy/img-right-funding.png"
-            width={332}
+            src="/dummy/roadmap-title.png"
+            width={169}
+            height={40}
+            alt="Picture of the author"
+          />
+          <Image
+            class="mt-8"
+            src="/dummy/roadmap-detail.png"
+            width={1125}
             height={644}
             alt="Picture of the author"
           />
-          <button
-            class="bg-[#ffcd4e] rounded-[56px] px-[16px] py-[24px] text-18 font-bold uppercase mt-[-35px]"
-            onClick={() => {
-              setIsOpenFunginModal(true);
-            }}
-          >
-            SUPPORT THIS PROJECT
-          </button>
         </div>
       </div>
     </div>

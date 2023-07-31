@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import "@rainbow-me/rainbowkit/styles.css";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+import Router from "next/router";
 
 import {
   RainbowKitProvider,
@@ -72,7 +73,13 @@ function MyApp({ Component, pageProps }) {
   return (
     <WagmiConfig config={wagmiConfig}>
       <RainbowKitProvider appInfo={demoAppInfo} chains={chains}>
-        <div class="absolute p-[12px] right-0">
+        <div
+          class="font-normal text-[30px] text-bold text-white absolute p-[12px] left-5 top-2 hover:cursor-pointer"
+          onClick={() => Router.replace("/")}
+        >
+          Otter Studio
+        </div>
+        <div class="absolute p-[12px] right-5 top-2">
           <ConnectButton />
         </div>
         <Component {...pageProps} />

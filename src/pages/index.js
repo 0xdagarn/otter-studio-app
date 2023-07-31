@@ -39,32 +39,34 @@ export default function Home() {
   return (
     <div>
       {/* GW */}
-      <div class="bg-[url('/bg-sura.svg')] bg-contain flex items-center justify-center h-[947px]">
-        <div class="max-w-[1200px]">
-          <div class="font-normal text-[64px] text-white">
+      <div class="bg-[url('/bg-sura.svg')] bg-contain flex items-center justify-center h-screen">
+        <div class="w-[80%]">
+          <div class="font-normal text-[64px] text-white pt-[300px]">
             Tears of the Antarctic
           </div>
-          <div class="font-normal text-[32px] text-white max-w-[813px]">
+          <div class="font-normal text-[32px] text-white max-w-[800px] pt-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center pt-12">
             <div
-              class="bg-[#FFCD4E] rounded-[56px] py-[37px] px-[24px] text-[24px] text-black font-bold"
+              class="bg-[#FFCD4E] rounded-[56px] py-[37px] px-[24px] text-[24px] text-black font-bold hover:cursor-pointer"
               onClick={() => {
                 Router.replace("/fundings/tears-of-the-antarctic");
               }}
             >
               More Details
             </div>
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center px-8">
               <Image
                 src="/icon_shell.svg"
                 width={77}
                 height={72}
                 alt="Picture of the author"
               />
-              <div class="font-normal text-[24px] text-white">60% Funding</div>
+              <div class="font-normal text-[24px] text-white pl-3">
+                60% Funding
+              </div>
             </div>
             <div class="flex items-center justify-center">
               <Image
@@ -73,7 +75,7 @@ export default function Home() {
                 height={62}
                 alt="Picture of the author"
               />
-              <div class="font-normal text-[24px] text-white">
+              <div class="font-normal text-[24px] text-white pl-3">
                 65 Supporters
               </div>
             </div>
@@ -82,45 +84,49 @@ export default function Home() {
       </div>
 
       {/* JH */}
-      <div class="bg-black">
-        <div class="text-main-orange font-black-han-sans text-3xl font-normal leading-normal align-middle">
-          Funding In Progress
-        </div>
-        <div class="flex text-main-orange justify-end text-center gap-[25px] font-noto-sans font-medium leading-normal text-base">
-          <div class="rounded-[32px] border border-main-orange ">
-            {" "}
-            Ongoing Funding{" "}
+      <div class="bg-black px-7 pb-[100px]">
+        <div class="flex justify-between py-[50px]">
+          <div class="text-main-orange font-black-han-sans text-3xl font-normal leading-normal align-middle">
+            Funding In Progress
           </div>
-          <div class="rounded-[32px] border border-main-orange"> Nature </div>
-          <div class="rounded-[32px] border border-main-orange"> Carbon </div>
-          <div class="rounded-[32px] border border-main-orange">
-            {" "}
-            Environmental{" "}
+          <div class="flex text-main-orange justify-end text-center gap-[25px] font-noto-sans font-medium leading-normal text-base">
+            <div class="rounded-[32px] border border-main-orange p-2 flex items-center justify-center">
+              Ongoing Funding
+            </div>
+            <div class="rounded-[32px] border border-main-orange flex items-center justify-center p-2">
+              Nature
+            </div>
+            <div class="rounded-[32px] border border-main-orange flex items-center justify-center p-2">
+              Carbon
+            </div>
+            <div class="rounded-[32px] border border-main-orange flex items-center justify-center p-2">
+              Environmental
+            </div>
           </div>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-4">
           {images.map((image, index) => (
-            <div key={index} className="image">
+            <div key={index} className="image hover:cursor-pointer">
               <img
+                class="w-full h-auto rounded-[20px]"
                 key={index}
                 src={image.imageUrl}
                 alt={`Image ${index + 1}`}
-                className="w-full h-auto"
               />
             </div>
           ))}
         </div>
-        <div class="text-main-orange font-black-han-sans text-4xl font-normal leading-normal">
+        <div class="text-main-orange font-black-han-sans text-4xl font-normal leading-normal pt-[40px] pb-[20px]">
           Nature And People
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 overflow-x-scroll">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-4 overflow-x-scroll">
           {images.map((image, index) => (
-            <div key={index} className="image">
+            <div key={index} className="image hover:cursor-pointer">
               <img
+                class="w-full h-auto rounded-[20px]"
                 key={index}
                 src={image.imageUrl}
                 alt={`Image ${index + 1}`}
-                className="w-full h-auto"
               />
             </div>
           ))}
