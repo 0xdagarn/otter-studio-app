@@ -1,7 +1,10 @@
 import Image from "next/image";
 import Router from "next/router";
+import { useState } from "react";
 
 export default function Scene() {
+  const [isFunded, setIsFunded] = useState(false);
+
   return (
     <div class="bg-[#041522] pb-[100px]">
       <div class="bg-[url('/header.svg')] bg-contain items-center justify-center font-normal pt-[150px] pb-[80px] pl-[200px]">
@@ -12,19 +15,31 @@ export default function Scene() {
             Router.replace("/videos/tears-of-the-antarctic");
           }}
         >
-          WATCH CHATER 1
+          {!isFunded ? "Watch Trailer" : "WATCH CHATER 1"}
         </button>
       </div>
       <div class="pl-[100px]">
-        <div class="font-normal text-[32px] text-[#FFCD4E] pt-[100px] mb-[70px]">
+        <div
+          class="font-normal text-[32px] text-[#FFCD4E] pt-[100px] mb-[70px]"
+          onClick={() => setIsFunded(!isFunded)}
+        >
           Behind the scene
         </div>
-        <Image
-          src="/bhs-1.png"
-          width={484}
-          height={644}
-          alt="Picture of the author"
-        />
+        {!isFunded ? (
+          <Image
+            src="/bhs-1.png"
+            width={484}
+            height={644}
+            alt="Picture of the author"
+          />
+        ) : (
+          <Image
+            src="/bhs-full.png"
+            width={1460}
+            height={644}
+            alt="Picture of the author"
+          />
+        )}
       </div>
       <div></div>
     </div>

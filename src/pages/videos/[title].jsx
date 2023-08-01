@@ -11,13 +11,10 @@ import {
 
 import GateABI from "../../contracts/abis/GateABI.json";
 import { GateAddress } from "../../contracts/address.json";
+import DocumentaryProducerPassABI from "../../contracts/abis/DocumentaryProducerPassABI.json";
+import { DocumentaryProducerPassAddress } from "../../contracts/address.json";
 
-const VotingSuccessModal = ({
-  isOpenModal,
-  setIsOpenFunginModal,
-  isLoading,
-  write,
-}) => {
+const VotingSuccessModal = ({ isOpenModal, setIsOpenFunginModal }) => {
   const [voteOption, setVoteOption] = useState(0);
 
   return (
@@ -222,7 +219,7 @@ export default function Scene() {
   }, []);
 
   return (
-    <div class="bg-[#041522] min-h-screen flex items-center justify-center">
+    <div class="bg-[#041522] min-h-screen flex items-center justify-center pt-[30px]">
       <VotingModal
         isOpenModal={isOpenVotingModal}
         setIsOpenFunginModal={setIsOpenVotingModal}
@@ -237,9 +234,9 @@ export default function Scene() {
       />
       {hasWindow && (
         <ReactPlayer
-          url="https://giistyxelor.s3.amazonaws.com/giists/video/video0cP3w019TiZYYcUy22WY.mp4"
-          width="85%"
-          height="90%"
+          url="https://www.dropbox.com/scl/fi/07ciy76qjqlz9i7cn4zm2/chapter-1.mov?rlkey=c5cx2yew5jzgb6evimotdp0xf&dl=0"
+          width="100%"
+          height="100%"
           playing={true}
           muted={true}
           onEnded={() => setIsOpenVotingModal(true)}

@@ -13,32 +13,22 @@ import {
   trustWallet,
   ledgerWallet,
 } from "@rainbow-me/rainbowkit/wallets";
-import { configureChains, createConfig, WagmiConfig } from "wagmi";
-import {
-  mainnet,
-  polygon,
-  optimism,
-  arbitrum,
-  zora,
-  goerli,
-  hardhat,
-} from "wagmi/chains";
+import { configureChains, createConfig, sepolia, WagmiConfig } from "wagmi";
+import { mainnet, goerli, hardhat, cronosTestnet, cronos } from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [
     mainnet,
-    polygon,
-    optimism,
-    arbitrum,
-    zora,
     hardhat,
+    cronos,
+    cronosTestnet,
     ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === "true" ? [goerli] : []),
   ],
   [publicProvider()]
 );
 
-const projectId = "YOUR_PROJECT_ID";
+const projectId = "66346846c869b05bd90b1788311d3e47";
 
 const { wallets } = getDefaultWallets({
   appName: "RainbowKit demo",
