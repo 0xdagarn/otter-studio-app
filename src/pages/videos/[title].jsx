@@ -14,7 +14,7 @@ import { GateAddress } from "../../contracts/address.json";
 import DocumentaryProducerPassABI from "../../contracts/abis/DocumentaryProducerPassABI.json";
 import { DocumentaryProducerPassAddress } from "../../contracts/address.json";
 
-const VotingSuccessModal = ({ isOpenModal, setIsOpenFunginModal }) => {
+const VotingSuccessModal = ({ isOpenModal, setIsOpenFundingModal }) => {
   const [voteOption, setVoteOption] = useState(0);
 
   return (
@@ -37,7 +37,7 @@ const VotingSuccessModal = ({ isOpenModal, setIsOpenFunginModal }) => {
                       src="/close-btn.svg"
                       width={16}
                       height={16}
-                      onClick={() => setIsOpenFunginModal(false)}
+                      onClick={() => setIsOpenFundingModal(false)}
                     />
                     <div class="flex items-center justify-center gap-[72px]">
                       <div class="flex flex-col items-center justify-center">
@@ -84,11 +84,15 @@ const VotingSuccessModal = ({ isOpenModal, setIsOpenFunginModal }) => {
 
 const VotingModal = ({
   isOpenModal,
-  setIsOpenFunginModal,
+  setIsOpenFundingModal,
   isLoading,
   write,
 }) => {
   const [voteOption, setVoteOption] = useState(0);
+
+  useEffect(() => {
+    console.log(voteOption);
+  }, [voteOption]);
 
   return (
     <div>
@@ -110,7 +114,7 @@ const VotingModal = ({
                       src="/close-btn.svg"
                       width={16}
                       height={16}
-                      onClick={() => setIsOpenFunginModal(false)}
+                      onClick={() => setIsOpenFundingModal(false)}
                     />
                     <Image
                       src="/voting-chapter-2.png"
@@ -127,13 +131,19 @@ const VotingModal = ({
                           height={435}
                           onClick={() => setVoteOption(1)}
                         />
-                        <div
-                          class={`font-normal text-[20px] text-white p-3 ${
-                            voteOption === 1 ? "text-[#FFCD4E]" : ""
-                          }`}
-                        >
-                          Chinstrap Penguin
-                        </div>
+                        {voteOption === 1 ? (
+                          <div
+                            class={`font-normal text-[20px] text-[#FFCD4E] p-3 ${
+                              voteOption === 1 ? "text-[#FFCD4E]" : ""
+                            }`}
+                          >
+                            Chinstrap Penguin
+                          </div>
+                        ) : (
+                          <div class={`font-normal text-[20px] text-white p-3`}>
+                            Chinstrap Penguin
+                          </div>
+                        )}
                       </div>
                       <div class="flex flex-col items-center">
                         <Image
@@ -143,13 +153,19 @@ const VotingModal = ({
                           height={435}
                           onClick={() => setVoteOption(2)}
                         />
-                        <div
-                          class={`font-normal text-[20px] text-white p-3 ${
-                            voteOption === 2 ? "text-[#FFCD4E]" : ""
-                          }`}
-                        >
-                          Emperor Penguin
-                        </div>
+                        {voteOption === 2 ? (
+                          <div
+                            class={`font-normal text-[20px] text-[#FFCD4E] p-3 ${
+                              voteOption === 2 ? "text-[#FFCD4E]" : ""
+                            }`}
+                          >
+                            Emperor Penguin
+                          </div>
+                        ) : (
+                          <div class={`font-normal text-[20px] text-white p-3`}>
+                            Emperor Penguin
+                          </div>
+                        )}
                       </div>
                       <div class="flex flex-col items-center">
                         <Image
@@ -159,13 +175,19 @@ const VotingModal = ({
                           height={435}
                           onClick={() => setVoteOption(3)}
                         />
-                        <div
-                          class={`font-normal text-[20px] text-white p-3 ${
-                            voteOption === 3 ? "text-[#FFCD4E]" : ""
-                          }`}
-                        >
-                          Rockhopper Penguin
-                        </div>
+                        {voteOption === 3 ? (
+                          <div
+                            class={`font-normal text-[20px] text-[#FFCD4E] p-3 ${
+                              voteOption === 3 ? "text-[#FFCD4E]" : ""
+                            }`}
+                          >
+                            Rockhopper Penguin
+                          </div>
+                        ) : (
+                          <div class={`font-normal text-[20px] text-white p-3`}>
+                            Rockhopper Penguin
+                          </div>
+                        )}
                       </div>
                     </div>
                     <div
@@ -187,7 +209,7 @@ const VotingModal = ({
 };
 
 export default function Scene() {
-  const [isOpenVotingModal, setIsOpenVotingModal] = useState(false);
+  const [isOpenVotingModal, setIsOpenVotingModal] = useState(true);
   const [isOpenVotingSuccessModal, setIsOpenVotingSuccessModal] =
     useState(false);
   const [hasWindow, setHasWindow] = useState(false);
@@ -229,8 +251,6 @@ export default function Scene() {
       <VotingSuccessModal
         isOpenModal={isOpenVotingSuccessModal}
         setIsOpenFunginModal={setIsOpenVotingSuccessModal}
-        isLoading={isLoading}
-        write={write}
       />
       {hasWindow && (
         <ReactPlayer
