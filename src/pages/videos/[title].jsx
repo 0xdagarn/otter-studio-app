@@ -35,10 +35,10 @@ const VotingSuccessModal = ({
                 <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all">
                   <div class="flex flex-col items-center justify-center p-12 bg-[#051b2f]">
                     <Image
-                      class="absolute right-4 top-4 hover:cursor-pointer"
-                      src="/btn-close.png"
-                      width={40}
-                      height={40}
+                      class="absolute right-6 top-6 hover:cursor-pointer"
+                      src="/close-btn.svg"
+                      width={16}
+                      height={16}
                       onClick={() => setIsOpenFunginModal(false)}
                     />
                     <div class="flex items-center justify-center gap-[72px]">
@@ -106,10 +106,10 @@ const VotingModal = ({
                 <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all">
                   <div class="flex flex-col items-center justify-center p-12 bg-[#051b2f]">
                     <Image
-                      class="absolute right-4 top-4 hover:cursor-pointer"
-                      src="/btn-close.png"
-                      width={40}
-                      height={40}
+                      class="absolute right-6 top-6 hover:cursor-pointer"
+                      src="/close-btn.svg"
+                      width={16}
+                      height={16}
                       onClick={() => setIsOpenFunginModal(false)}
                     />
                     <Image

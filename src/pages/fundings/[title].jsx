@@ -35,10 +35,10 @@ const FundingSuccessModal = ({ isOpenModal, setIsOpenFunginModal }) => {
                       alt="Picture of the author"
                     />
                     <Image
-                      class="absolute right-4 top-4 hover:cursor-pointer"
-                      src="/btn-close.png"
-                      width={40}
-                      height={40}
+                      class="absolute right-6 top-6 hover:cursor-pointer"
+                      src="/close-btn.svg"
+                      width={16}
+                      height={16}
                       onClick={() => setIsOpenFunginModal(false)}
                     />
                     <button
@@ -89,10 +89,10 @@ const FundingModal = ({
                     />
                     <div class="flex mt-8">
                       <Image
-                        class="absolute right-4 top-4 hover:cursor-pointer"
-                        src="/btn-close.png"
-                        width={40}
-                        height={40}
+                        class="absolute right-6 top-6 hover:cursor-pointer"
+                        src="/close-btn.svg"
+                        width={16}
+                        height={16}
                         onClick={() => setIsOpenFunginModal(false)}
                       />
                       <Image
@@ -265,7 +265,7 @@ export default function Funding() {
               </div>
             </div>
             <button
-              class="bg-[#ffcd4e] rounded-[56px] px-[16px] py-[24px] text-18 font-bold uppercase mt-[-25px] z-10"
+              class="bg-[#ffcd4e] rounded-[56px] px-[16px] py-[24px] text-18 font-bold uppercase mt-4"
               onClick={() => {
                 setIsOpenFundingModal(true);
               }}
