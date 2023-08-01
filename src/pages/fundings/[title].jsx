@@ -169,7 +169,7 @@ const FundingModal = ({
 };
 
 export default function Funding() {
-  const [isOpenFundingModal, setIsOpenFunginModal] = useState(false);
+  const [isOpenFundingModal, setIsOpenFundingModal] = useState(false);
   const [isOpenFundingSuccessModal, setIsOpenFunginSuccessModal] =
     useState(false);
 
@@ -191,7 +191,7 @@ export default function Funding() {
 
   useEffect(() => {
     if (isSuccess) {
-      setIsOpenFunginModal(false);
+      setIsOpenFundingModal(false);
       setIsOpenFunginSuccessModal(true);
     }
   }, [isSuccess]);
@@ -200,7 +200,7 @@ export default function Funding() {
     <div class="bg-[#081521] pb-[200px]">
       <FundingModal
         isOpenModal={isOpenFundingModal}
-        setIsOpenFunginModal={setIsOpenFunginModal}
+        setIsOpenFunginModal={setIsOpenFundingModal}
         write={write}
         isLoading={isLoading}
       />
@@ -242,7 +242,7 @@ export default function Funding() {
             <button
               class="bg-[#ffcd4e] rounded-[56px] px-[16px] py-[24px] text-18 font-bold uppercase mt-[-35px]"
               onClick={() => {
-                setIsOpenFunginModal(true);
+                setIsOpenFundingModal(true);
               }}
             >
               SUPPORT THIS PROJECT
