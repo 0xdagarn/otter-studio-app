@@ -8,19 +8,22 @@ const bannerImages = [
   "http://placekitten.com/820/642",
 ];
 
-const images = [
-  { key: "1", imageUrl: "/environment_waste_1.svg" },
-  { key: "2", imageUrl: "/environment_waste_1.svg" },
-  { key: "3", imageUrl: "/environment_waste_1.svg" },
-  { key: "4", imageUrl: "/environment_waste_1.svg" },
-  { key: "5", imageUrl: "/environment_waste_1.svg" },
-  { key: "6", imageUrl: "/environment_waste_1.svg" },
-  { key: "7", imageUrl: "/environment_waste_1.svg" },
-  { key: "8", imageUrl: "/environment_waste_1.svg" },
-  { key: "9", imageUrl: "/environment_waste_1.svg" },
-  { key: "10", imageUrl: "/environment_waste_1.svg" },
-  { key: "11", imageUrl: "/environment_waste_1.svg" },
-  { key: "12", imageUrl: "/environment_waste_1.svg" },
+const fundings = [
+  { key: "6", imageUrl: "/video-6.jpg" },
+  { key: "7", imageUrl: "/video-7.jpg" },
+];
+
+const nature = [
+  { key: "1", imageUrl: "/video-1.jpeg" },
+  { key: "2", imageUrl: "/video-2.jpg" },
+  { key: "5", imageUrl: "/video-5.jpg" },
+  { key: "8", imageUrl: "/video-8.jpg" },
+  { key: "9", imageUrl: "/video-9.jpg" },
+];
+
+const people = [
+  { key: "10", imageUrl: "/video-10.jpg" },
+  { key: "11", imageUrl: "/video-11.jpg" },
 ];
 
 export default function Home() {
@@ -105,8 +108,14 @@ export default function Home() {
           </div>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-4">
-          {images.map((image, index) => (
-            <div key={index} className="image hover:cursor-pointer">
+          {fundings.map((image, index) => (
+            <div
+              key={index}
+              className="image hover:cursor-pointer"
+              onClick={() =>
+                alert("This documentary is being prepared for screening.")
+              }
+            >
               <img
                 class="w-full h-auto rounded-[20px]"
                 key={index}
@@ -117,11 +126,38 @@ export default function Home() {
           ))}
         </div>
         <div class="text-main-orange font-black-han-sans text-4xl font-normal leading-normal pt-[40px] pb-[20px]">
-          Nature And People
+          Nature And Carbon
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-4 overflow-x-scroll">
-          {images.map((image, index) => (
-            <div key={index} className="image hover:cursor-pointer">
+          {nature.map((image, index) => (
+            <div
+              key={index}
+              className="image hover:cursor-pointer"
+              onClick={() =>
+                alert("This documentary is being prepared for screening.")
+              }
+            >
+              <img
+                class="w-full h-auto rounded-[20px]"
+                key={index}
+                src={image.imageUrl}
+                alt={`Image ${index + 1}`}
+              />
+            </div>
+          ))}
+        </div>
+        <div class="text-main-orange font-black-han-sans text-4xl font-normal leading-normal pt-[40px] pb-[20px]">
+          People
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-4 overflow-x-scroll">
+          {people.map((image, index) => (
+            <div
+              key={index}
+              className="image hover:cursor-pointer"
+              onClick={() =>
+                alert("This documentary is being prepared for screening.")
+              }
+            >
               <img
                 class="w-full h-auto rounded-[20px]"
                 key={index}

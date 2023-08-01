@@ -243,7 +243,7 @@ export default function Funding() {
               />
             </div>
             <div class="absolute flex flex-col items-center justify-center">
-              <div class="flex items-center mt-[-60px]">
+              <div class="flex items-center mt-[-80px]">
                 <div class="font-normal text-[72px] text-[#ffcd4e]">75</div>
                 <div class="font-normal text-[36px] text-[#ffcd4e] pl-2 pt-4">
                   %

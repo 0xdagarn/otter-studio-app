@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import ReactPlayer from "react-player";
+import Router from "next/router";
 
 import {
   usePrepareContractWrite,
@@ -65,7 +66,9 @@ const VotingSuccessModal = ({
                         </div>
                         <div
                           class="rounded-[30px] text-[#FFCD4E] border-2 border-[#FFCD4E] hover:cursor-pointer px-[24px] py-[16px] mt-[36px] flex justify-center"
-                          onClick={() => write()}
+                          onClick={() =>
+                            Router.replace("/scenes/tears-of-the-antarctic")
+                          }
                         >
                           Support Chapter 2
                         </div>
@@ -122,49 +125,49 @@ const VotingModal = ({
                       <div class="flex flex-col items-center hover:text-[#FFCD4E]">
                         <Image
                           class="rounded-2xl hover:border-[#FFCD4E] hover:border-[3px] hover:cursor-pointer"
-                          src="/voting-pg.png"
+                          src="/ChinstrapPenguin.png"
                           width={268}
                           height={435}
                           onClick={() => setVoteOption(1)}
                         />
                         <div
-                          class={`font-normal text-[24px] text-white p-3 ${
+                          class={`font-normal text-[20px] text-white p-3 ${
                             voteOption === 1 ? "text-[#FFCD4E]" : ""
                           }`}
                         >
-                          Penguin #1
+                          Chinstrap Penguin
                         </div>
                       </div>
                       <div class="flex flex-col items-center">
                         <Image
                           class="rounded-2xl hover:border-[#FFCD4E] hover:border-[3px] hover:cursor-pointer"
-                          src="/voting-pg.png"
+                          src="/EmperorPenguin.png"
                           width={268}
                           height={435}
                           onClick={() => setVoteOption(2)}
                         />
                         <div
-                          class={`font-normal text-[24px] text-white p-3 ${
+                          class={`font-normal text-[20px] text-white p-3 ${
                             voteOption === 2 ? "text-[#FFCD4E]" : ""
                           }`}
                         >
-                          Penguin #2
+                          Emperor Penguin
                         </div>
                       </div>
                       <div class="flex flex-col items-center">
                         <Image
                           class="rounded-2xl hover:border-[#FFCD4E] hover:border-[3px] hover:cursor-pointer"
-                          src="/voting-pg.png"
+                          src="/RockhopperPenguin.png"
                           width={268}
                           height={435}
                           onClick={() => setVoteOption(3)}
                         />
                         <div
-                          class={`font-normal text-[24px] text-white p-3 ${
+                          class={`font-normal text-[20px] text-white p-3 ${
                             voteOption === 3 ? "text-[#FFCD4E]" : ""
                           }`}
                         >
-                          Penguin #3
+                          Rockhopper Penguin
                         </div>
                       </div>
                     </div>
