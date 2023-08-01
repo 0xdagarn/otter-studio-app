@@ -144,7 +144,7 @@ const VotingModal = ({
                       <div class="flex flex-col items-center">
                         <Image
                           class="rounded-2xl hover:border-[#FFCD4E] hover:border-[3px] hover:cursor-pointer"
-                          src="/EmperorPenguin.png"
+                          src="/Emperor-Penguin.png"
                           width={268}
                           height={435}
                           onClick={() => setVoteOption(2)}
