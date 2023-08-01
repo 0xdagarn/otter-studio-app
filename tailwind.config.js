@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: 'jit',
+  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
@@ -14,9 +16,11 @@ module.exports = {
       },
       colors: {
         'main-orange': '#FFCD4E',
+        'white' : '#FFF'
       },
       fontFamily: {
           'black-han-sans': ['"Black Han Sans"', 'sans-serif'],
+          'helvetica': ['Helvetica Neue', 'Arial', 'sans-serif'],
       },
     },
   },
