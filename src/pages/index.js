@@ -44,12 +44,14 @@ export default function Home() {
       {/* GW */}
       <div class="bg-[url('/bg-sura.svg')] bg-contain flex items-center justify-center h-screen">
         <div class="w-[80%]">
-          <div class="font-normal text-[64px] text-white pt-[300px]">
+          <div class="font-normal text-[64px] text-white pt-[200px]">
             Tears of the Antarctic
           </div>
           <div class="font-normal text-[32px] text-white max-w-[800px] pt-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e
+            The last continent on the planet that remains untouched. But
+            Antarctica is melting. The place possesses key indicators on climate
+            change and possible solutions. The world is now turning its
+            attention to Antarctica.
           </div>
           <div className="flex items-center pt-12">
             <div
@@ -94,11 +96,10 @@ export default function Home() {
           </div>
           <div class="flex text-main-orange justify-end text-center gap-[25px] font-noto-sans font-medium leading-normal text-base">
             <div class="rounded-[32px] border border-main-orange p-2 flex items-center justify-center">
-            Funding In Progress
+              Funding In Progress
             </div>
             <div class="rounded-[32px] border border-main-orange flex items-center justify-center p-2">
-            Nature And Carbon
-
+              Nature And Carbon
             </div>
             <div class="rounded-[32px] border border-main-orange flex items-center justify-center p-2">
               People
