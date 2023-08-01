@@ -90,10 +90,6 @@ const VotingModal = ({
 }) => {
   const [voteOption, setVoteOption] = useState(0);
 
-  useEffect(() => {
-    console.log(voteOption);
-  }, [voteOption]);
-
   return (
     <div>
       {isOpenModal && (
@@ -209,7 +205,7 @@ const VotingModal = ({
 };
 
 export default function Scene() {
-  const [isOpenVotingModal, setIsOpenVotingModal] = useState(true);
+  const [isOpenVotingModal, setIsOpenVotingModal] = useState(false);
   const [isOpenVotingSuccessModal, setIsOpenVotingSuccessModal] =
     useState(false);
   const [hasWindow, setHasWindow] = useState(false);
