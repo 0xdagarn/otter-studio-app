@@ -7,3 +7,7 @@
 body {
   font-family: "Black Han Sans", sans-serif;
 }
+
+ul {
+  list-style-type: circle;
+}
