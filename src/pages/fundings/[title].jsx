@@ -66,6 +66,9 @@ const FundingModal = ({
   isLoading,
   write,
 }) => {
+  const [num, setNum] = useState("0");
+  const [price, setPrice] = useState("0.0");
+
   return (
     <div>
       {isOpenModal && (
@@ -125,6 +128,11 @@ const FundingModal = ({
                             class="w-[61px]  text-center bg-gray-50 border border-gray-300 text-gray-900 text-[24px] rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             placeholder="0"
                             required
+                            onChange={(e) => {
+                              const num = e.target.value;
+                              setNum(num);
+                              setPrice((parseFloat(num) * 0.1).toString());
+                            }}
                           />
                           <div class="font-normal text-[24px] text-white px-2">
                             /
@@ -142,14 +150,18 @@ const FundingModal = ({
                             Total Price
                           </div>
                           <div class="font-normal text-[40px] text-white px-2">
-                            0.1
+                            {price && price >= 0
+                              ? parseFloat(price).toFixed(2)
+                              : "0.00"}
                           </div>
                           <div class="font-normal text-[16px] text-white px-2">
                             ETH
                           </div>
                         </div>
                         <div
-                          disabled={!write || isLoading}
+                          disabled={
+                            !price || price === 0 || !write || isLoading
+                          }
                           class="rounded-[30px] text-[#FFCD4E] border-2 border-[#FFCD4E] hover:cursor-pointer px-[24px] py-[16px] mt-[36px]"
                           onClick={() => write()}
                         >
@@ -222,7 +234,7 @@ export default function Funding() {
         style={{ width: "100%", height: "auto" }}
       /> */}
       <div class="flex items-center justify-center flex-col">
-        <div class="flex gap-24 items-center justify-center">
+        <div class="flex gap-[20px] items-center justify-center">
           <div>
             <Image
               class="mt-20"
@@ -233,7 +245,7 @@ export default function Funding() {
             />
           </div>
           <div class="flex flex-col items-center justify-center">
-            <div class="flex flex-col justify-center items-center relative">
+            {/* <div class="flex flex-col justify-center items-center relative">
               <Image
                 class="bg-[url('/bg-sura.svg')]"
                 src="/funding-status.png"
@@ -241,27 +253,27 @@ export default function Funding() {
                 height={644}
                 alt="Picture of the author"
               />
-            </div>
-            <div class="absolute flex flex-col items-center justify-center">
-              <div class="flex items-center mt-[-80px]">
-                <div class="font-normal text-[72px] text-[#ffcd4e]">75</div>
-                <div class="font-normal text-[36px] text-[#ffcd4e] pl-2 pt-4">
-                  %
+            </div> */}
+            <div class="flex flex-col items-center justify-center bg-[url('/funding-status.png')] bg-center bg-contain bg-no-repeat p-[100px]">
+              <div class="flex flex-col justify-center items-center">
+                <div class="flex items-center mt-[-20px]">
+                  <div class="font-normal text-[72px] text-[#ffcd4e]">75</div>
+                  <div class="font-normal text-[36px] text-[#ffcd4e]">%</div>
                 </div>
-              </div>
-              <div class="font-normal text-[18px] text-[#ffcd4e] pb-[100px] mt-[-20px]">
-                Complete
-              </div>
-              <div class="flex items-center pb-[20px]">
-                <div class="font-normal text-[72px] text-white">350</div>
-                <div class="font-normal text-[36px] text-white pl-2 pt-4">
-                  ETH
+                <div class="font-normal text-[18px] text-[#ffcd4e] mt-[-20px] mb-[100px]">
+                  Complete
                 </div>
-              </div>
-              <div class="font-normal text-[18px] text-white mt-[-40px]">{`pledged of ${"500"} ETH goal`}</div>
-              <div class="font-normal text-[72px] text-white pt-[40px]">65</div>
-              <div class="font-normal text-[18px] text-white mt-[-20px]">
-                Supporters
+                <div class="flex items-center pb-[20px]">
+                  <div class="font-normal text-[72px] text-white">350</div>
+                  <div class="font-normal text-[36px] text-white pt-4 pl-2">ETH</div>
+                </div>
+                <div class="font-normal text-[14px] text-white mt-[-40px]">{`pledged of ${"500"} ETH goal`}</div>
+                <div class="font-normal text-[72px] text-white mt-[40px]">
+                  65
+                </div>
+                <div class="font-normal text-[18px] text-white mt-[-20px]">
+                  Supporters
+                </div>
               </div>
             </div>
             <button
