@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <div>
       {/* GW */}
-      <div class="bg-[url('/bg-sura.svg')] bg-contain flex items-center justify-center h-screen">
+      <div class="bg-[url('/bg-main.png')] bg-contain flex items-center justify-center h-screen">
         <div class="w-[80%]">
           <div class="font-normal text-[64px] text-white pt-[200px]">
             Tears of the Antarctic

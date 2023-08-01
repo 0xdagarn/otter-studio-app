@@ -228,7 +228,7 @@ export default function Funding() {
       {/* <div class="bg-[url('/bg-funding-detail.svg')] bg-cover flex items-center justify-center h-[392px] font-normal text-[64px] text-white">
         Tears of the Antarctic
       </div> */}
-      <div class="bg-[url('/header.svg')] bg-contain flex items-center justify-center font-normal text-[64px] text-white pt-[150px] pb-[80px]">
+      <div class="bg-[url('/detail-header.png')] bg-contain flex items-center justify-center font-normal text-[64px] text-white pt-[150px] pb-[80px]">
         Tears of the Antarctic
       </div>
       {/* <Image
@@ -238,7 +238,7 @@ export default function Funding() {
         sizes="100vw"
         style={{ width: "100%", height: "auto" }}
       /> */}
-      <div class="flex items-center justify-center flex-col mt-[100px]">
+      <div class="flex items-center justify-center flex-col mt-[60px]">
         <div class="flex gap-[20px] items-center justify-center">
           <div>
             <div>

@@ -7,7 +7,7 @@ export default function Scene() {
 
   return (
     <div class="bg-[#041522] pb-[100px]">
-      <div class="bg-[url('/header.svg')] bg-contain items-center justify-center font-normal pt-[150px] pb-[80px] pl-[200px]">
+      <div class="bg-[url('/scene-header.png')] bg-contain items-center justify-center font-normal pt-[150px] pb-[80px] pl-[200px]">
         <div class="text-[64px] text-white ">Tears of the Antarctic</div>
         <button
           class="bg-[#ffcd4e] rounded-[56px] px-[16px] py-[24px] text-18 font-bold uppercase mt-[24px]"
