@@ -106,7 +106,7 @@ const FundingModal = ({
                       <div class="flex flex-col items-center  justify-center pl-[34px]">
                         <div class="w-full flex items-center justify-center rounded-t-[18px] bg-[#012b4e]">
                           <div class="font-normal text-[32px] text-white">
-                            1240
+                            3750
                           </div>
                           <div class="font-normal text-[32px] text-white">
                             /
@@ -265,11 +265,13 @@ export default function Funding() {
                 </div>
                 <div class="flex items-center pb-[20px]">
                   <div class="font-normal text-[72px] text-white">350</div>
-                  <div class="font-normal text-[36px] text-white pt-4 pl-2">ETH</div>
+                  <div class="font-normal text-[36px] text-white pt-4 pl-2">
+                    ETH
+                  </div>
                 </div>
                 <div class="font-normal text-[14px] text-white mt-[-40px]">{`pledged of ${"500"} ETH goal`}</div>
                 <div class="font-normal text-[72px] text-white mt-[40px]">
-                  65
+                  85
                 </div>
                 <div class="font-normal text-[18px] text-white mt-[-20px]">
                   Supporters

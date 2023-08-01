@@ -68,7 +68,7 @@ export default function Home() {
                 alt="Picture of the author"
               />
               <div class="font-normal text-[24px] text-white pl-3">
-                60% Funding
+                75% Funding
               </div>
             </div>
             <div class="flex items-center justify-center">
@@ -79,7 +79,7 @@ export default function Home() {
                 alt="Picture of the author"
               />
               <div class="font-normal text-[24px] text-white pl-3">
-                65 Supporters
+                85 Supporters
               </div>
             </div>
           </div>
@@ -94,16 +94,14 @@ export default function Home() {
           </div>
           <div class="flex text-main-orange justify-end text-center gap-[25px] font-noto-sans font-medium leading-normal text-base">
             <div class="rounded-[32px] border border-main-orange p-2 flex items-center justify-center">
-              Ongoing Funding
+            Funding In Progress
             </div>
             <div class="rounded-[32px] border border-main-orange flex items-center justify-center p-2">
-              Nature
+            Nature And Carbon
+
             </div>
             <div class="rounded-[32px] border border-main-orange flex items-center justify-center p-2">
-              Carbon
-            </div>
-            <div class="rounded-[32px] border border-main-orange flex items-center justify-center p-2">
-              Environmental
+              People
             </div>
           </div>
         </div>
