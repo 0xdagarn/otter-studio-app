@@ -11,6 +11,7 @@ const bannerImages = [
 const fundings = [
   { key: "6", imageUrl: "/video-6.jpg" },
   { key: "7", imageUrl: "/video-7.jpg" },
+  { key: "9", imageUrl: "/video-9.jpg" },
 ];
 
 const nature = [
@@ -18,7 +19,6 @@ const nature = [
   { key: "2", imageUrl: "/video-2.jpg" },
   { key: "5", imageUrl: "/video-5.jpg" },
   { key: "8", imageUrl: "/video-8.jpg" },
-  { key: "9", imageUrl: "/video-9.jpg" },
 ];
 
 const people = [
