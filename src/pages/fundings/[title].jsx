@@ -207,11 +207,11 @@ export default function Funding() {
     }
   }, [isSuccess]);
 
-  const items = ['First', 'Second', 'Third'];
+  const items = ["First", "Second", "Third"];
 
-function ListItem({ item }) {
-  return <div>{`. ${item}`}</div>;
-}
+  function ListItem({ item }) {
+    return <div>{`. ${item}`}</div>;
+  }
 
   return (
     <div class="bg-[#081521] pb-[200px]">
@@ -238,77 +238,91 @@ function ListItem({ item }) {
         sizes="100vw"
         style={{ width: "100%", height: "auto" }}
       /> */}
-      <div class="flex items-center justify-center flex-col">
+      <div class="flex items-center justify-center flex-col mt-[100px]">
         <div class="flex gap-[20px] items-center justify-center">
           <div>
             <div>
-              <div class="text-main-orange font-black-han-sans text-3xl font-normal">About</div>
+              <div class="text-main-orange font-black-han-sans text-3xl font-normal">
+                About
+              </div>
               <div>
                 <Image
                   src="/asset/Vector 26.svg"
                   width={136}
                   height={13}
-                  alt="zig zag">
-                </Image>
+                  alt="zig zag"
+                ></Image>
               </div>
-            </div> 
+            </div>
             <div class="flex flex-col items-start justify-start text-white mt-12">
-            <div class="font-thin h-100">
-              <div class="flex flex-row gap-6">
-              <ul className="list-disc list-inside">
-                <li>Director
-                  <div class="inline-block ml-6">
-                    <div class="font-helvetica">Kim Jin-man</div>
-                  </div>
-                </li>
-                <li>Writer
-                  <div class="inline-block ml-10">
-                    <div class="font-helvetica">Ko Hye-rim</div></div>
-                </li>
-                
-                <li>Category
-                  <div class="inline-block ml-4">
-                    <div class="font-helvetica">Documentary</div></div></li>
-                  
-            </ul>
-              </div>
-              <div class="flex flex-row gap-10">
-              </div>
-              <div class="flex flex-row gap-4">
-                
-              </div>
+              <div class="font-thin h-100">
+                <div class="flex flex-row gap-6">
+                  <ul className="list-disc list-inside">
+                    <li>
+                      Director
+                      <div class="inline-block ml-6">
+                        <div class="font-helvetica">Kim Jin-man</div>
+                      </div>
+                    </li>
+                    <li>
+                      Writer
+                      <div class="inline-block ml-10">
+                        <div class="font-helvetica">Ko Hye-rim</div>
+                      </div>
+                    </li>
+
+                    <li>
+                      Category
+                      <div class="inline-block ml-4">
+                        <div class="font-helvetica">Documentary</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="flex flex-row gap-10"></div>
+                <div class="flex flex-row gap-4"></div>
               </div>
               <div class="mt-14 max-w-[680px]">
-                <div>South Korea's first adventrue documentary about nature.</div>
-                <div class="mt-5 font-helvetica">This documentary was undertaken in one of the most extreme climates on Earth to find ways to combat climate change, which is under way.
-                A new beginning in the adventure documentary genre.
-                The high emotions and heartwarming fottage in the Tears of the Antarctic is a must-see for viewers.
+                <div>
+                  South Korea's first adventrue documentary about nature.
+                </div>
+                <div class="mt-5 font-helvetica">
+                  This documentary was undertaken in one of the most extreme
+                  climates on Earth to find ways to combat climate change, which
+                  is under way. A new beginning in the adventure documentary
+                  genre. The high emotions and heartwarming fottage in the Tears
+                  of the Antarctic is a must-see for viewers.
                 </div>
                 <ul className="list-disc list-inside">
-                <li class="mt-14">
-                  Engaged earth 
-                </li>
+                  <li class="mt-14">Engaged earth</li>
                 </ul>
-                <div class= "text-white mt-12 font-helvetica text-lg">
+                <div class="text-white mt-4 font-helvetica text-lg">
                   <div>
-                  Fears of a cataclysmic event caused by climate change... The ice sheets of Antarctica are melthing. Antarctica, humankinds' last hope, is 
-                  attracting the worlds'attention! South Korea's research efforts on this unknown continent are taking place     
+                    Fears of a cataclysmic event caused by climate change... The
+                    ice sheets of Antarctica are melthing. Antarctica,
+                    humankinds' last hope, is attracting the worlds'attention!
+                    South Korea's research efforts on this unknown continent are
+                    taking place
                   </div>
-                <div class="mt-5">
-                  The last continent on the planet that remains untouched. But Antarctica is melting. 
-                </div>
-                <div class="mt-5">
-                  As a continent covered in the ice and snow, Antarctica retains a natural beauty that has been protected by extreme cold since prehistoric times.
-                </div>
+                  <div class="mt-5">
+                    The last continent on the planet that remains untouched. But
+                    Antarctica is melting.
+                  </div>
+                  <div class="mt-5">
+                    As a continent covered in the ice and snow, Antarctica
+                    retains a natural beauty that has been protected by extreme
+                    cold since prehistoric times.
+                  </div>
                 </div>
               </div>
-            </div> 
+            </div>
             <div>
               <div></div> {/*Bold1*/}
-              <div></div> {/*Summary1*/} 
-              <div></div> {/*Bold2*/} 
+              <div></div> {/*Summary1*/}
+              <div></div> {/*Bold2*/}
               <div></div> {/*Summary2*/}
-            </div> {/*Paragraph*/}
+            </div>{" "}
+            {/*Paragraph*/}
           </div>
           <div class="flex flex-col items-center justify-center">
             {/* <div class="flex flex-col justify-center items-center relative">
@@ -355,15 +369,17 @@ function ListItem({ item }) {
           </div>
         </div>
         <div class="mt-[93px]">
-        <div class="text-main-orange font-black-han-sans text-3xl font-normal">Roadmap</div>
-                <div>
-                  <Image
-                    src="/asset/Vector 26.svg"
-                    width={136}
-                    height={13}
-                    alt="zig zag">
-                  </Image>
-                </div>
+          <div class="text-main-orange font-black-han-sans text-3xl font-normal">
+            Roadmap
+          </div>
+          <div>
+            <Image
+              src="/asset/Vector 26.svg"
+              width={136}
+              height={13}
+              alt="zig zag"
+            ></Image>
+          </div>
           <Image
             class="mt-[111px]"
             src="/dummy/roadmap-detail.png"
