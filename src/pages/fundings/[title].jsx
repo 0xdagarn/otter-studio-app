@@ -233,14 +233,39 @@ export default function Funding() {
             />
           </div>
           <div class="flex flex-col items-center justify-center">
-            <Image
-              src="/dummy/img-right-funding.png"
-              width={332}
-              height={644}
-              alt="Picture of the author"
-            />
+            <div class="flex flex-col justify-center items-center relative">
+              <Image
+                class="bg-[url('/bg-sura.svg')]"
+                src="/funding-status.png"
+                width={332}
+                height={644}
+                alt="Picture of the author"
+              />
+            </div>
+            <div class="absolute flex flex-col items-center justify-center">
+              <div class="flex items-center mt-[-60px]">
+                <div class="font-normal text-[72px] text-[#ffcd4e]">75</div>
+                <div class="font-normal text-[36px] text-[#ffcd4e] pl-2 pt-4">
+                  %
+                </div>
+              </div>
+              <div class="font-normal text-[18px] text-[#ffcd4e] pb-[100px] mt-[-20px]">
+                Complete
+              </div>
+              <div class="flex items-center pb-[20px]">
+                <div class="font-normal text-[72px] text-white">350</div>
+                <div class="font-normal text-[36px] text-white pl-2 pt-4">
+                  ETH
+                </div>
+              </div>
+              <div class="font-normal text-[18px] text-white mt-[-40px]">{`pledged of ${"500"} ETH goal`}</div>
+              <div class="font-normal text-[72px] text-white pt-[40px]">65</div>
+              <div class="font-normal text-[18px] text-white mt-[-20px]">
+                Supporters
+              </div>
+            </div>
             <button
-              class="bg-[#ffcd4e] rounded-[56px] px-[16px] py-[24px] text-18 font-bold uppercase mt-[-35px]"
+              class="bg-[#ffcd4e] rounded-[56px] px-[16px] py-[24px] text-18 font-bold uppercase mt-[-25px] z-10"
               onClick={() => {
                 setIsOpenFundingModal(true);
               }}
