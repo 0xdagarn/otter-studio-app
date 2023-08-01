@@ -240,17 +240,17 @@ export default function Scene() {
     <div class="bg-[#041522] min-h-screen flex items-center justify-center pt-[30px]">
       <VotingModal
         isOpenModal={isOpenVotingModal}
-        setIsOpenFunginModal={setIsOpenVotingModal}
+        setIsOpenFundingModal={setIsOpenVotingModal}
         isLoading={isLoading}
         write={write}
       />
       <VotingSuccessModal
         isOpenModal={isOpenVotingSuccessModal}
-        setIsOpenFunginModal={setIsOpenVotingSuccessModal}
+        setIsOpenFundingModal={setIsOpenVotingSuccessModal}
       />
       {hasWindow && (
         <ReactPlayer
-          url="https://www.dropbox.com/scl/fi/07ciy76qjqlz9i7cn4zm2/chapter-1.mov?rlkey=c5cx2yew5jzgb6evimotdp0xf&dl=0"
+          url="https://www.dropbox.com/scl/fi/5ygkziymou9uyymev3nsu/chapter-1-final.mov?dl=0&rlkey=c538fvzp1b1flwl8fb6skmsia"
           width="100%"
           height="100%"
           playing={true}
